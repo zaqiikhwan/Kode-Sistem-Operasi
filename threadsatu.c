@@ -1,3 +1,7 @@
+#include <stdio.h> 
+#include <pthread.h> 
+#include <stdlib.h>
+
 void * thread1() {
 	while(1) {
 		printf("Hello!!\n");
