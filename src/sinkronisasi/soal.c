@@ -8,8 +8,8 @@ int counter = 0;
 pthread_t tid[4];
 
 void *doSomeThing(void *arg) { // modifikasi pada fungsi *doSomeThing untuk langkah 2 Tugas 1
-    printf("\n Thread %d started, please wait...\n", counter);
     counter++;
+    printf("\n Thread %d started, please wait...\n", counter);
     unsigned long i = 0;
     for(i=0; i<(0xFFFFFFFF);i++);
     
