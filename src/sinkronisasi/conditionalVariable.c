@@ -14,7 +14,9 @@ void *functionCount1() {
 
     // Wait while functionCount2() operates on count
     // mutex unlocked if condition varialbe in functionCount2() signaled.
-    pthread_cond_wait( &condition_var, &count_mutex );
+    
+    
+    pthread_cond_wait( &condition_var, &count_mutex ); // baris yang perlu dihapus / comment pada langkah 2
     count++;
     printf("Counter value functionCount1: %d\n",count);
 
@@ -33,7 +35,8 @@ void *functionCount2(){
         // Condition of if statement has been met.
         // Signal to free waiting thread by freeing the mutex.
         // Note: functionCount1() is now permitted to modify "count".
-        pthread_cond_signal( &condition_var );
+        
+        pthread_cond_signal( &condition_var ); // hapus / comment line ini pada langkah ke-3
     } else {
         count++;
         printf("Counter value functionCount2: %d\n",count);

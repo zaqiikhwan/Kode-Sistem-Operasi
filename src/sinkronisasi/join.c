@@ -19,7 +19,8 @@ int main() {
     pthread_create( &thread_id[i], NULL, thread_function, NULL );
     }
 
-    for(j=1; j <= 100; j++) {
+    
+    for(j=1; j <= 100; j++) {              /* baris 23-25 yg dihapus pada langkah 2 */
         pthread_join( thread_id[j], NULL);
     }
     /* Now that all threads are complete I can print the final result. */

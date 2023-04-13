@@ -7,7 +7,7 @@
 int counter = 0;
 pthread_t tid[4];
 
-void *doSomeThing(void *arg) {
+void *doSomeThing(void *arg) { // modifikasi pada fungsi *doSomeThing untuk langkah 2 Tugas 1
     printf("\n Thread %d started, please wait...\n", counter);
     counter++;
     unsigned long i = 0;
