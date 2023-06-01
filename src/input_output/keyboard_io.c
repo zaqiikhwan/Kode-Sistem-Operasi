@@ -8,8 +8,7 @@ static int keyboard_event(struct notifier_block *nb, unsigned long event, void *
     struct keyboard_notifier_param *param = data;
     if (event == KBD_KEYCODE)
     {
-pr_info("Keyboard Event: keycode = %d, value = %d, down
-= %d\n", param->value, param->down, param->down ? 1 : 0);
+        pr_info("Keyboard Event: keycode = %d, value = %d, down = %d\n", param->value, param->down, param->down ? 1 : 0);
     }
     return NOTIFY_OK;
 }
